@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 // GET /api/user/1
 router.get('/:id', (req, res) => {
     User.findOne({
-        attributes: { exlude: ['password'] },
+        // attributes: { exlude: ['password'] },
         where: {
             id: req.params.id
         }
@@ -56,6 +56,7 @@ router.put('/:id', (req, res) => {
   
     // pass in req.body instead to only update what's passed through
     User.update(req.body, {
+      individualHooks: true,
       where: {
         id: req.params.id
       }

@@ -18,6 +18,7 @@
   "start": "node server.js",
   "homepage": "https://github.com/Jillium/just-tech-news#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mysql2": "^2.3.3",

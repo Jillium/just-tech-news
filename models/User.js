@@ -74,7 +74,7 @@ User.init(
         freezeTableName: true,
         // use underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
         underscored: true,
-        // make it so our model name stays lowercase in the database
+        // make it so our model name stays lowercase in the database- can also use it to override the model name
         modelName: 'user'
 
     }

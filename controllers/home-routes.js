@@ -38,5 +38,21 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+// route for login page 
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
+
+
+// route for session/cookies
+router.get('/', (req, res) => {
+  console.log(req.session);
+
+  // other logic...
+});
 
 module.exports = router;
